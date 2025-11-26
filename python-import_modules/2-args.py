@@ -11,6 +11,6 @@ if __name__ == "__main__":
         print("{} arguments:".format(count))
 
     if count > 0:
-            for i, arg in enumerate(argv):
-                position = i + 1
-                print("{}: {}".format(position, arg))
+        for i, arg in enumerate(argv):
+            position = i + 1
+            print("{}: {}".format(position, arg))
