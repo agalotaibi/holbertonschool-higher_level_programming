@@ -7,5 +7,5 @@ def uniq_add(my_list=[]):
             new_list.append(i)
     for i in new_list:
         total += i
-    
+
     return total
