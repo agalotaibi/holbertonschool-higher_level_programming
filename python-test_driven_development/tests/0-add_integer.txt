@@ -47,3 +47,17 @@ Test validation (passing None):
 ... except TypeError as e:
 ...     print(e)
 a must be an integer
+
+Test with infinity:
+>>> try:
+...     add_integer(float('inf'))
+... except TypeError as e:
+...     print(e)
+a must be an integer
+
+Test with NaN:
+>>> try:
+...     add_integer(float('nan'))
+... except TypeError as e:
+...     print(e)
+a must be an integer
