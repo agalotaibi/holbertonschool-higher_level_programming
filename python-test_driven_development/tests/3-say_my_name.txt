@@ -21,12 +21,12 @@ My name is Walter White
 Usage with only first name:
 
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
 Usage with empty string as last name:
 
 >>> say_my_name("Alice", "")
-My name is Alice
+My name is Alice 
 
 Usage with long names:
 
