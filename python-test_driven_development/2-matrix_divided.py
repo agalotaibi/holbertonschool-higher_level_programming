@@ -23,7 +23,7 @@ def matrix_divided(matrix, div):
     """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
@@ -39,18 +39,18 @@ def matrix_divided(matrix, div):
     for i, row in enumerate(matrix):
         if not isinstance(row, list):
             raise TypeError(msg_type)
-        
+
         if i == 0:
             row_length = len(row)
         elif len(row) != row_length:
             raise TypeError(msg_size)
-        
+
         new_row = []
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(msg_type)
             new_row.append(round(element / div, 2))
-        
+
         new_matrix.append(new_row)
 
     return new_matrix
