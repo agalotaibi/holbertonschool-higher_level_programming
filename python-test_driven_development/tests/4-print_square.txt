@@ -1,0 +1,133 @@
+The ``4-print_square`` module
+============================
+
+Using ``print_square``
+----------------------
+
+Import the function:
+
+>>> print_square = __import__('4-print_square').print_square
+
+Print a 4x4 square:
+
+>>> print_square(4)
+####
+####
+####
+####
+
+Print a 10x10 square:
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+Print a 0x0 square (empty):
+
+>>> print_square(0)
+
+Print a 1x1 square:
+
+>>> print_square(1)
+#
+
+Print a 2x2 square:
+
+>>> print_square(2)
+##
+##
+
+Print a 3x3 square:
+
+>>> print_square(3)
+###
+###
+###
+
+Input Validation Tests
+----------------------
+
+Size is negative:
+
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Size is a negative integer:
+
+>>> print_square(-5)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Size is a float:
+
+>>> print_square(3.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is a negative float:
+
+>>> print_square(-3.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is a string:
+
+>>> print_square("5")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is None:
+
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is a list:
+
+>>> print_square([5])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is a boolean:
+
+>>> print_square(True)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Missing argument:
+
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+Size is infinity:
+
+>>> print_square(float('inf'))
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Size is NaN:
+
+>>> print_square(float('nan'))
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
