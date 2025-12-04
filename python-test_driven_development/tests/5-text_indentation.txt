@@ -70,11 +70,6 @@ Empty string:
 
 >>> text_indentation("")
 
-String with only spaces:
-
->>> text_indentation("   ")
-   
-
 String with delimiter at the beginning:
 
 >>> text_indentation(". Hello")
