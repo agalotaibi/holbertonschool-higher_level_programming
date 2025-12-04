@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""
+This module provides a function that divides all elements of a matrix
+by a given number and returns a new matrix with the results rounded
+to 2 decimal places.
+"""
 def matrix_divided(matrix, div):
     """Divide all elements of a matrix by div and return a new matrix."""
-
     if (not isinstance(matrix, list) or 
         any(not isinstance(row, list) for row in matrix) or
         any(not all(isinstance(x, (int, float)) for x in row) for row in matrix)):
