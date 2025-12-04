@@ -1,35 +1,50 @@
-#!/usr/bin/python3
-"""
-This module defines the matrix_divided function.
-"""
-
 def matrix_divided(matrix, div):
     """
-    Divide all elements of a matrix by div.
+    Divides all elements of a matrix.
 
     Args:
-        matrix (list of lists): matrix of integers/floats.
-        div (int/float): divisor.
+        matrix (list): A list of lists of integers or floats.
+        div (int/float): The number to divide by.
 
     Returns:
-        list of lists: new matrix with divided values.
+        list: A new matrix with the result of the division.
 
     Raises:
-        TypeError: if input is invalid.
-        ZeroDivisionError: if div is 0.
+        TypeError: If matrix is not a list of lists of integers/floats.
+        TypeError: If each row of the matrix is not of the same size.
+        TypeError: If div is not a number.
+        ZeroDivisionError: If div is 0.
     """
-    if (not isinstance(matrix, list) or
-        not all(isinstance(row, list) for row in matrix) or
-        not all(isinstance(x, (int, float)) for row in matrix for x in row)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-    row_len = len(matrix[0])
-    if any(len(row) != row_len for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+    
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return [[round(x / div, 2) for x in row] for row in matrix]
+    msg_type = "matrix must be a matrix (list of lists) of integers/floats"
+    msg_size = "Each row of the matrix must have the same size"
+
+    if not isinstance(matrix, list) or len(matrix) == 0:
+        raise TypeError(msg_type)
+
+    new_matrix = []
+    row_length = 0
+
+    for i, row in enumerate(matrix):
+        if not isinstance(row, list):
+            raise TypeError(msg_type)
+        
+        if i == 0:
+            row_length = len(row)
+        elif len(row) != row_length:
+            raise TypeError(msg_size)
+        
+        new_row = []
+        for element in row:
+            if not isinstance(element, (int, float)):
+                raise TypeError(msg_type)
+            new_row.append(round(element / div, 2))
+        
+        new_matrix.append(new_row)
+
+    return new_matrix
