@@ -1,0 +1,139 @@
+The ``5-text_indentation`` module
+==================================
+
+Using ``text_indentation``
+--------------------------
+
+Import the function:
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic test with period:
+
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+
+Basic test with question mark:
+
+>>> text_indentation("How are you?")
+How are you?
+<BLANKLINE>
+
+Basic test with colon:
+
+>>> text_indentation("Note:")
+Note:
+<BLANKLINE>
+
+Multiple sentences:
+
+>>> text_indentation("Hello. How are you? I am fine.")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I am fine.
+<BLANKLINE>
+
+Text with spaces after delimiters:
+
+>>> text_indentation("Hello.   World")
+Hello.
+<BLANKLINE>
+World
+
+Text with spaces before delimiters:
+
+>>> text_indentation("Hello   . World")
+Hello   .
+<BLANKLINE>
+World
+
+Text with all three delimiters:
+
+>>> text_indentation("First. Second? Third: Fourth")
+First.
+<BLANKLINE>
+Second?
+<BLANKLINE>
+Third:
+<BLANKLINE>
+Fourth
+
+Text without delimiters:
+
+>>> text_indentation("Hello World")
+Hello World
+
+Empty string:
+
+>>> text_indentation("")
+
+String with only spaces:
+
+>>> text_indentation("   ")
+   
+
+String with delimiter at the beginning:
+
+>>> text_indentation(". Hello")
+.
+<BLANKLINE>
+Hello
+
+String with delimiter at the end:
+
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+
+Multiple consecutive delimiters:
+
+>>> text_indentation("Hello...World")
+Hello.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+World
+
+Text with newlines:
+
+>>> text_indentation("Hello.\nWorld")
+Hello.
+<BLANKLINE>
+<BLANKLINE>
+World
+
+Input Validation Tests
+----------------------
+
+Text is not a string (integer):
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Text is not a string (None):
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Text is not a string (list):
+
+>>> text_indentation(["Hello"])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Missing argument:
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
