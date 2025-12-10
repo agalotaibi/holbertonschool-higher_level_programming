@@ -1,0 +1,56 @@
+#!/usr/bin/python3
+"""
+This module defines a class named Rectangle based on 0-rectangle.py,
+with private attributes, properties, and validation.
+"""
+
+
+class Rectangle:
+    """
+    Defines a rectangle with private width and height attributes,
+    and property setters/getters with validation.
+    """
+    def __init__(self, width=0, height=0):
+        """
+        Initializes a new Rectangle instance.
+
+        Args:
+            width (int): The width of the rectangle (defaults to 0).
+            height (int): The height of the rectangle (defaults to 0).
+        """
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        """Retrieves the width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Sets the width of the rectangle with validation."""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        
+        # When setting via the setter, it assigns to the private attribute
+        self.__width = value
+
+    @property
+    def height(self):
+        """Retrieves the height of the rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Sets the height of the rectangle with validation."""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        
+        # When setting via the setter, it assigns to the private attribute
+        self.__height = value
