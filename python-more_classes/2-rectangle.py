@@ -8,7 +8,7 @@ adding methods for calculating area and perimeter.
 class Rectangle:
     """
     Defines a rectangle with private width and height attributes,
-    property setters/getters with validation, and methods for area and perimeter.
+    property setters/getters with validation.
     """
     def __init__(self, width=0, height=0):
         """
@@ -23,7 +23,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Retrieves the width of the rectangle (Private attribute: __width)."""
+        """Retrieves the width of the rectangle."""
         return self.__width
 
     @width.setter
@@ -39,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the height of the rectangle (Private attribute: __height)."""
+        """Retrieves the height of the rectangle."""
         return self.__height
 
     @height.setter
@@ -56,9 +56,9 @@ class Rectangle:
     def area(self):
         """
         Calculates and returns the area of the rectangle.
-        Formula: A = width * height 
+        Formula: A = width * height
         """
-        # Area = width * height
+
         return self.__width * self.__height
 
     def perimeter(self):
