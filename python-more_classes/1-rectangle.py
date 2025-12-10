@@ -34,8 +34,7 @@ class Rectangle:
 
         if value < 0:
             raise ValueError("width must be >= 0")
-        
-        # When setting via the setter, it assigns to the private attribute
+
         self.__width = value
 
     @property
@@ -51,6 +50,5 @@ class Rectangle:
 
         if value < 0:
             raise ValueError("height must be >= 0")
-        
-        # When setting via the setter, it assigns to the private attribute
+
         self.__height = value
