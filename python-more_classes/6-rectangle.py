@@ -11,6 +11,7 @@ class Rectangle:
     property setters/getters with validation & instance count.
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializes a new Rectangle instance.
@@ -97,7 +98,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Destructor that prints a message when the Rectangle instance is deleted.
+        Prints a message when the Rectangle instance is deleted.
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
