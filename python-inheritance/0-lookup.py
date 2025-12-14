@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module is all about returner list 
+This module is all about returner list
 of available attributes & methods of an object
 """
 
