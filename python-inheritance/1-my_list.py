@@ -12,7 +12,6 @@ class MyList(list):
     def print_sorted(self):
         """
         Prints the list in ascending sorted order.
-        
         Note:
             This method prints a sorted copy of the list and does not
             modify the actual instance of the list.
