@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-This module is an empty class
+This module contains an empty class BaseGeometry.
 """
 
 
-def inherits_from(obj, a_class):
+class BaseGeometry:
     """
-    empty class BaseGeometry
+    An empty class that serves as a base for geometry-related classes.
     """
-    class BaseGeometry:
-        pass
+    pass
