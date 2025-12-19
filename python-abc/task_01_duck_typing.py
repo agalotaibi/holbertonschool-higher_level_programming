@@ -5,7 +5,7 @@ Implements an abstract Shape class and concrete Circle and Rectangle classes.
 """
 
 from abc import ABC, abstractmethod
-import math
+PI = 3.141592653589793
 
 
 class Shape(ABC):
@@ -36,11 +36,11 @@ class Circle(Shape):
     
     def area(self):
         """Calculate and return the area of the circle."""
-        return math.pi * self.radius ** 2
+        return PI * self.radius ** 2
     
     def perimeter(self):
         """Calculate and return the perimeter (circumference) of the circle."""
-        return 2 * math.pi * self.radius
+        return 2 * PI * self.radius
 
 
 class Rectangle(Shape):
