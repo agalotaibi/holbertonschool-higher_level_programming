@@ -38,6 +38,6 @@ def fetch_and_save_posts():
 
         with open("post.csv", mode='w', newline='', encoding='utf-8') as file:
             filename = ['id', 'title', 'body']
-            writeing = csv.DictWriter(file, filenames=filename)
+            writeing = csv.DictWriter(file, fieldnames=filename)
             writeing.writeheader()
             writeing.writerows(data)
