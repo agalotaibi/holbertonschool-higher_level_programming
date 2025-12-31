@@ -35,7 +35,7 @@ class run(http.server.BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             message = "Hello, this is a simple API!"
-            self.wfile.write(message.encode('utf-8'))
+            self.wfile.write(message)
 
         elif self.path == '/data':
             self.send_response(200)
@@ -47,7 +47,7 @@ class run(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write("OK".encode())
+            self.wfile.write("OK")
         elif self.path == '/info':
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
@@ -59,7 +59,7 @@ class run(http.server.BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             message = "Endpoint not found"
-            self.wfile.write(message.encode('utf-8'))
+            self.wfile.write(message)
 
 with socketserver.TCPServer(("", PORT), run) as httpd:
     print("serving at port", PORT)
