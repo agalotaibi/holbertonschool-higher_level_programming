@@ -46,6 +46,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             json_message = json.dumps({"name": "John", "age": 30, "city": "New York"})
             self.wfile.write(json_message.encode())
+        elif self.path == '/status':
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write("OK".encode())
         else:
             self.send_error(404, "Endpoint not found")
 
