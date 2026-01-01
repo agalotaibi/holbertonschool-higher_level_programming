@@ -4,6 +4,8 @@ from flask import request
 
 app = Flask(__name__)
 
+users = {}
+
 @app.route("/")
 def home():
     return "<p>Welcome to the Flask API!</p>"
