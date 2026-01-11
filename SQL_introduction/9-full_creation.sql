@@ -12,7 +12,7 @@ INSERT INTO second_table (ID, NAME, SCORE)
 VALUE (2, "Alex", 3);
 
 INSERT INTO second_table (ID, NAME, SCORE)
-VALUE (3, "Bob", 14)
+VALUE (3, "Bob", 14);
 
 INSERT INTO second_table (ID, NAME, SCORE)
-VALUE (4, "George", 8)
+VALUE (4, "George", 8);
