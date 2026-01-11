@@ -1,6 +1,6 @@
 -- ists all records of the table
--- Records should be ordered by score (top first)
+0;276;0c-- Records should be ordered by score (top first)
 
-SELECT SCORE, NAME
+SELECT score, name
 FROM second_table
 ORDER BY SCORE DESC;
