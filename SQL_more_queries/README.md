@@ -1,0 +1,1 @@
+understand more about SQL
