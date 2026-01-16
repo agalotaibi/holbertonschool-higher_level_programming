@@ -1,7 +1,7 @@
-Python
 #!/usr/bin/python3
 """
-Adds the State object "Louisiana" to the database hbtn_0e_6_usa.
+Adds the State object "Louisiana" 
+to the database hbtn_0e_6_usa.
 """
 import sys
 from model_state import Base, State
