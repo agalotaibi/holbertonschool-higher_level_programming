@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Contains the class definition of a State and an instance Base = declarative_base()
+Contains the class definition of a State 
+and an instance Base = declarative_base()
 """
 
 
@@ -14,7 +15,7 @@ Base = declarative_base()
 class State(Base):
     """
     State class that links to the MySQL table 'states'
-    
+
     Attributes:
         id (int): The state's id. Auto-generated, unique, primary key.
         name (str): The state's name. String with max 128 chars, not null.
