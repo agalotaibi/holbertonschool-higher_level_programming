@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Prints the State object with the name passed as argument from the database hbtn_0e_6_usa.
+Prints the State object with the name passed
+as argument from the database hbtn_0e_6_usa.
 Safe from SQL injection.
 """
 import sys
